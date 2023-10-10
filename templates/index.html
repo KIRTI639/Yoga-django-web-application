@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+    <title>Index Page</title>
+    <style>
+        *{ box-sizing: border-box; }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+           background-image: url("../static/img/b1.jpg");
+           background-repeat: no-repeat;
+           background-size: cover;
+        }
+        .boxes{
+            display: flex;
+            justify-content:space-around;
+            margin-top: 25vh;
+        }
+        .box{
+            background: rgb(211, 16, 114);
+            width: 400px;
+            height: 280px;
+            border: 1px solid;
+            border-radius: 7px;
+            text-align: center; 
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;            
+        }
+        a:hover{
+            color:rgb(217, 231, 231);
+        }
+        .anchor{ margin-top: 5px; }
+        .box .image img{
+            width: 100%;
+            height: 235px;
+            border-top-right-radius: 7px;
+            border-top-left-radius: 7px;
+        }
+
+        /* Media Query */
+        @media screen and (max-width:900px) {
+            .box{
+                background: rgb(211, 16, 114);
+                border: 1px solid;
+                border-radius: 7px;
+                text-align: center; 
+                width: 300px;
+                height: 230px;
+            }
+            .box .image img{
+                width: 100%;
+                height: 198px
+            }            
+            .anchor{
+                margin-top: 0px;
+            }
+            a{
+                font-size: 16px;
+            }
+        }
+            
+        @media screen and (max-width:650px) {
+            .box{
+                background: rgb(211, 16, 114);
+              
+                border: 1px solid;
+                border-radius: 7px;
+                text-align: center; 
+                width: 80%;
+                height: 53%;
+                margin: 0px auto;
+                margin-bottom: 40px;
+            }
+            .boxes{ display: block; }
+            
+            .box .image img{
+                width: 100%;
+                height: 50%;
+            }
+            a{
+                font-size: 16px;
+            }
+            .anchor{
+                margin-bottom: 5px;    
+            }   
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">
+            <div class="image">
+                <img src="/static/img/Beginner.jpg" alt="Yoga Image" width="100%" height="235px">
+            </div>
+            <div class="anchor">
+                <a href="/home">Yoga App</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="/static/img/Body_Mass_Index_002S.jpg" alt="BMI Image" width="100%" height="235px">
+            </div>
+            <div class="anchor">
+                <a href="/check-BMI">Check Your BMI</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

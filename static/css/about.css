@@ -1,0 +1,85 @@
+.about-bg{
+    background-image: url('/static/img/about-us-banner.png');
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+}
+
+.mission{
+    border-bottom: 1px solid black;
+    padding: 20px;
+    /* margin: 30px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.mission-text{
+    text-align: justify;
+    font-size: 18px;
+    margin: auto 0px;
+    padding: 40px 60px;
+    
+}
+.mission .mission-img img{
+    width: 75%;
+    padding: 40px auto;
+    margin: 50px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.all-cards{
+    /* border: 2px solid green; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.my-card{
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 260px;
+    margin-bottom: 20px;
+}
+.my-card:hover{
+    box-shadow: 2px 2px 15px 5px gray;
+    transition : 0.6s;
+    width: 275px;
+}
+.card-img{
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+}
+.card-img img{
+    width: 100%;
+    border-radius: 50%;
+    margin: 0px auto;
+}
+.card-links{
+    word-spacing: 2px;
+}
+.my-para{
+    border-bottom: 1px solid black;
+    margin: 40px 0px;
+}
+@media screen and (max-width:450px) {
+    .about-bg{
+        background-image: url('/static/img/about-us-banner.png');
+        width: 100%;
+        height: 25vh;
+        background-size: cover;
+    }
+    .mission-text{
+        /* text-align: justify;
+        font-size: 18px;
+        margin: auto 0px; */
+        padding: 40px 40px;
+        
+    }
+    .mission .mission-img img{
+        width: 70%;
+        padding: 40px auto;
+        /* margin: 50px; */
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+}

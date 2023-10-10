@@ -1,0 +1,92 @@
+{% include 'header.html' %}
+
+
+<section class="container my-5">
+    {% if query %}
+      
+    {% if diseases or yogas %}
+    <p>Results for <b> "{{query}}" </b></p>
+    <div class="diff-levels justify-content-between">
+
+        
+        
+        <!-- One Block -->
+        {% for problem in diseases %}
+        <div class="card levels" style="width: 16rem;">
+          <img src="/{{problem.image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Yoga for <span style="color: darkred; font-weight: bolder;">{{problem.d_name}}</span></h5>
+            <a href="/home/yoga-for-disease/{{problem.d_code}} - {{problem.d_name}}" class="btn btn-outline-primary">Go to Yogas</a>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="container">
+        <div class="my-5">
+                
+            {% for yoga in yogas %}
+            
+                
+            <h3><span class="number">#{{forloop.counter}}</span>{{yoga.name}}</h3>
+            <div class="d-flex justify-content-between flex-wrap">
+                <div class="rounded">
+                    <img src="/{{yoga.image}}" alt="Image not found" width="500" height="300">
+                </div>
+                <div class="rounded">
+                    <iframe width="500" height="300" src="{{yoga.video_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+                
+                <h4>Steps to perform this -</h4>
+                <ul style="list-style-type: square; margin-left: 20px;">
+                {% for step in yoga.how_to_do %}
+                    <li>{{step}}</li>    
+                {% endfor %}
+                </ul>
+    
+                <h4>Benefits -</h4>
+                <ul style="list-style-type: none;">
+                    {% for benefit in yoga.benefits %}
+                        <li> <i class="fa-solid fa-circle-check" style="color: #157f2a;"></i>&nbsp;&nbsp;{{benefit}}</li>
+                    {% endfor %}               
+                </ul>
+            
+                <h4>Contraindications -</h4>
+                <ul style="list-style-type: none;">
+                    {% for cont in yoga.contraindications %}
+                        <li><i class="fa-solid fa-circle-exclamation" style="color: #b42318;"></i>&nbsp;&nbsp;{{cont}}</li>
+                    {% endfor %}               
+                </ul>
+
+            {% endfor %}
+        </div>
+    </div>
+
+    {% else %}
+
+    <p>Your search - <b><i> "{{query}}" </i></b> - did not match any documents.</p>
+
+    <h5>Suggestions:</h5>
+    <ul style="margin-left: 20px;">
+        <li>Make sure that all words are spelled correctly.</li>
+        <li>Try different keywords.</li>
+        <!-- <li>Try more general keywords.</li> -->
+    </ul>
+
+    {% endif %}
+
+    {% else %}
+    <p>Your search - <b><i> "{{query}}" </i></b> - did not match any documents.</p>
+
+    <h5>Suggestions:</h5>
+    <ul style="margin-left: 20px;">
+        <li>Make sure that all words are spelled correctly.</li>
+        <li>Try different keywords.</li>
+        <!-- <li>Try more general keywords.</li> -->
+    </ul>
+    {% endif %}
+    
+</section>
+
+{% include 'footer.html' %}

@@ -1,0 +1,108 @@
+<!-- {% load static %} -->
+{% include 'header.html' %}
+
+<div class="container">
+    <div class="pt-4">
+        <h2>User Information</h2>
+    </div>
+
+    <div class="">
+        <div class="table-responsive">
+            {% for info in data %}
+            <table class="table table-bordered table-striped table-hover">
+                <tr>
+                    <td>Your ID</td><td><b>{{ info.id }}</b></td>
+                </tr>
+                <tr>
+                    <td>Name</td><td><b> {{info.fullname}} </b> </td>
+                </tr>
+                <tr>
+                    <td>Email</td><td><b> {{info.email}} </b></td>
+                </tr>
+                <tr>
+                    <td>Mobile No.</td><td><b> {{info.mobile}}</b> </td>
+                </tr>
+                <tr>
+                    <td>Age</td><td><b> {{info.age}} </b></td>
+                </tr>
+                <tr>
+                    <td>Gender</td><td> <b>{{info.gender}} </b></td>
+                </tr>
+                <tr>
+                    <td>Disease</td><td><b> {{info.disease}} </b></td>
+                </tr>
+            </table>
+        </div>
+        <div class="">
+            <a href="/update/{{info.id}}" class="btn btn-outline-info">
+                <i class="fa-solid fa-pen"></i> Edit
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="my-3">
+        <h3>Recomendations</h3>
+        <p>On the basis of your disease, we recommend you to do these yogas regularly. It will be really helpful for your health and will keep you fit.</p>
+    </div>
+
+
+    <div class="recommend">
+        {% for info in disease %}
+            <div class="sub-recommend">
+                <img src="/{{info.image}}" alt="Image">
+            </div>
+        {% endfor %}    
+        
+        {% for info in data %}
+            <div class="sub-recommend">
+                <h5>Some Yogas related to : <b> {{ info.disease }} </b> are provided for you.</h5>
+                <a href="/home/yoga-for-disease/{{info.disease}}" class="btn btn-outline-info mt-3">Start Yoga</a>
+            </div>
+        {% endfor %}
+            
+    </div>
+    
+
+    <div class="mb-5 table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <tr>
+                <th>Query ID</th>
+                <th>Subject</th>
+                <th>Description</th>
+                <th>Status</th>
+            </tr>
+            
+            {% for q in my_query %}
+                <tr>
+                    <td>{{q.id}}</td>
+                    <td>{{q.subject}}</td>
+                    <td>{{q.message}}</td>
+                    <td><span class="modified"> {{q.status}} </span></td>
+                </tr>
+            {% endfor %}
+                
+        </table>
+    </div>
+    
+    <!-- <div class="mb-5">
+        <div class="query-status row">
+            <div class="col-2">Query ID</div>
+            <div class="col-3">Subject</div>
+            <div class="col-5">Description</div>
+            <div class="col-2">Status</div>
+        </div>
+        {% for q in my_query %}
+        <div class="queries row">
+            <div class="col-2">{{q.id}}</div>
+            <div class="col-3">{{q.subject}}</div>
+            <div class="col-5">{{q.message}}</div>
+            <div class="col-2"> <span class="modified"> {{q.status}} </span> </div>
+        </div>
+        {% endfor %}
+    </div> -->
+    
+</div>
+
+
+{% include 'footer.html' %}

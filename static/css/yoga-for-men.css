@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.men-bg{
+    background-image: url("https://www.hdfcergo.com/images/default-source/wellness-corner/history-of-yogab5892957fcd1484a892b887675a81c3d.jpg");
+    width: 100%;
+    height: 55vh;
+    background-size: cover;
+}
+.men-head{
+    padding-top: 120px;
+}

@@ -1,0 +1,47 @@
+{% include 'header.html' %}
+
+<div class="men-bg">
+    <h2 class="container men-head">Recommended Yogas for <span style="color: brown; font-weight: bolder;">{{bimari}}</span> </h2>
+</div>
+
+<div class="container">
+    <div class="my-5">
+            
+        {% for yoga in yogass %}
+        
+        <h3><span class="number">#{{forloop.counter}}</span>{{yoga.name}}</h3>
+        <div class="img-vid d-flex justify-content-between flex-wrap">
+            <div class="mb-2">
+                <img src="/{{yoga.image}}" alt="Image not found" width="500" height="300">
+            </div>
+            <div>
+                <iframe src="{{yoga.video_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen width="500" height="300"></iframe>
+            </div>
+        </div>
+        
+        <h4>Steps to perform this -</h4>
+        <ul style="list-style-type: square; margin-left: 20px;">
+        {% for step in yoga.how_to_do %}
+            <li>{{step}}</li>    
+        {% endfor %}
+        </ul>
+
+        <h4>Benefits -</h4>
+        <ul style="list-style-type: none;">
+            {% for benefit in yoga.benefits %}
+                <li> <i class="fa-solid fa-circle-check" style="color: #157f2a;"></i>&nbsp;&nbsp;{{benefit}}</li>
+            {% endfor %}               
+        </ul>
+    
+        <h4>Contraindications -</h4>
+        <ul style="list-style-type: none;">
+            {% for cont in yoga.contraindications %}
+                <li><i class="fa-solid fa-circle-exclamation" style="color: #b42318;"></i>&nbsp;&nbsp;{{cont}}</li>
+            {% endfor %}               
+        </ul>
+        
+        {% endfor %}
+    </div>
+</div>
+
+{% include 'footer.html' %}

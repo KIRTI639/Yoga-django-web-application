@@ -1,0 +1,604 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+nav{
+    background-color: white;
+    box-shadow: 0px 2px 5px 1px grey;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+.style{
+    color: brown; 
+    font-weight: bolder; 
+    font-size: x-large; 
+    border-bottom: 3px solid brown;
+}
+.image{
+    background-image: url('/static/img/yoga2.1.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+}
+.image h1{
+    padding-top: 100px;
+    margin-left: 70px; 
+}
+.typing{
+    color: red;
+    margin-left: 70px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.typing i{
+    color: white;
+    font-size: 30px;
+    margin-right: 15px;
+}
+.nav-link:hover{
+    border-bottom: 2px solid black;
+} 
+.yoga-types{
+    color: white;
+    background-color: black;
+    list-style-type: none;
+    position: absolute;
+    width: 15%;
+    margin-top: 50px;
+    margin-left: -50px;
+    padding: 5px;
+    /* border: 2px solid white; */
+    border-radius: 10px;
+}
+.yoga-type a{
+    color: white;
+    display: block;
+    padding: 4px 5px;
+}
+.hide{
+    display: none;
+}
+.yoga-type a:hover{
+    color: coral;
+    /* border: 2px solid white; */
+    /* border-radius: 8px; */
+}
+.head-span{
+    font-size: 45px;
+    font-weight: 700;
+}
+.section1{
+    background-color: #f3edde;
+    /* margin-bottom: 0px; */
+    border: 2px solid #f3edde;
+}
+.diff-levels{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.levels{
+
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.levels:hover{
+    border-radius: 0px;
+    box-shadow: 3px 3px 10px 7px grey;
+    border: none;
+    transition: 0.6s;
+}
+.levels:hover img{
+    border-radius: 0px;
+}
+.levels img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hr-50{
+    color: white;
+}
+.section2{
+    /* border: 2px dashed yellow; */
+    background-color: #423f3e;
+    padding: 30px 0;
+}
+.bro{
+    border: 2px solid yellow;
+}
+
+/* footer.html page starts from here */
+
+.footer{
+    /* width: 100%; */
+    background-color: #26201f;
+    padding: 40px 120px 0px 120px;
+}
+.sub-footer{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid white; */
+}
+.sub-footer-1 h5{
+    color: rgb(250, 70, 5);
+}
+.footer-link a{
+    color: white;
+    font-size: 16px;
+    line-height: 2rem;
+    margin-left: 35px;
+}
+
+.footer-link a:hover{
+    text-decoration: none;
+    border-bottom: 3px solid rgb(250, 70, 5);
+    color: rgb(250, 70, 5);
+}
+.footer-link address{
+    margin-left: 35px;
+}
+.icons{
+    font-size: 18px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 8px;
+    transition: .5s;
+}
+.social-1:hover .icons{
+    border: 2px solid #4267B2;
+    font-size: 21px;
+    color: #4267B2;
+    transition: .5s;
+}
+.social-2:hover .icons{
+    border: 2px solid #0394fc;
+    font-size: 21px;
+    color: #0394fc;
+    transition: .5s;
+}
+.social-4:hover .icons{
+    border: 2px solid #E1306C;
+    font-size: 21px;
+    color: #E1306C;
+    transition: .5s;
+}
+.social-5:hover .icons{
+    border: 2px solid #FF0000;
+    font-size: 21px;
+    color: #FF0000;
+    transition: .5s;
+}
+.social-media{
+    list-style-type: none;
+    display: flex;
+    /* margin-left: -40px; */
+}
+.copyright{
+    color: rgb(250, 70, 5);
+    font-weight: bold;
+}
+#copyright{
+    font-size: 14px;
+}
+@media screen and (max-width:450px) {
+    .footer{
+        padding: 0px;
+        padding-top: 20px;
+    }
+}
+/* footer.html page ends here */
+
+
+/* Beginner section starts from here... */
+.beginner-bg {
+    background-image: url('/static/img/Beginner-bg-2.jpg');
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.beginner-bg h1{
+    padding-top: 100px;
+    font-size: 60px;
+    color: white;
+    font-style: italic;
+}
+.beginner-sec-1{
+    background-color: #c9b6b3;   
+    padding-top: 80px;
+}
+.beg-box{
+    border: 1px solid;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 20px;
+    width: 100%;
+    justify-content:space-around;
+
+}
+.inner-1{
+    width: 350px;
+    padding-top: 50px;
+}
+
+.inner-2 img{
+    border-radius: 15px;
+}
+
+/* Intermediate Section starts from here */
+.intermediate-bg {
+    background-image: url('/static/img/Intermediate-bg.jpg');
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.intermediate-bg h1{
+    padding-top: 100px;
+    font-size: 60px;
+    color: white;
+    font-style: italic;
+}
+.intermediate-sec-1{
+    background-color: #c9b6b3;
+    padding-top: 80px;
+}
+
+/* Advanced section starts from here... */
+.advanced-bg {
+    background-image: url('/static/img/Advanced-bg.jpg');
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+.advanced-bg h1{
+    padding-top: 100px;
+    font-size: 60px;
+    color: white;
+    font-style: italic;
+}
+.advanced-sec-1{
+    background-color: #c9b6b3;
+    padding-top: 80px;
+}
+
+/* Help.html page starts from here... */
+.faqs{
+    margin-bottom: 80px;
+}
+.h{
+    margin-left: 30px;
+}
+.hr{
+    width: 10%;
+    border-top: 6px solid rebeccapurple;
+    margin-left: 30px;
+}
+.hr2{
+    width: 10%;
+    border-top: 6px solid rebeccapurple;
+}
+.questions{
+    margin: 30px;
+}
+.arrow{
+    color: rebeccapurple;
+    font-weight: 900;
+}
+.details{
+    border: 2px solid rgb(184, 133, 235);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0px;
+}
+.summary{
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid black;
+}
+summary{
+    font-size: 18px;
+    font-weight:600;
+}
+textarea{
+    width: 80%;
+    padding: 10px;
+}
+
+
+/* contact.html section starts from here.... */
+.contact-main{
+    background-image: url('https://iifls.com/wp-content/uploads/2023/02/Contact-Us.jpg');
+    width: 100%;
+    height: 55vh;
+    background-size: cover;
+}
+
+.con-span{
+    color: coral;
+    font-weight: 900;
+    font-size: 50px;
+}
+.inner{
+    border-radius: 10px;
+}
+.contact{
+    padding: 20px 100px;
+    text-align: center;
+}
+.contact h3{
+    color: darkred;
+    font-weight: bolder;
+}
+.con-icons{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+.touch{
+    border-bottom: 2px solid darkred;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+.con-icon{
+    border: 2px solid rebeccapurple;
+    border-radius: 8px;
+    width: 34%;
+}
+.con-icon i{
+    font-size: 30px;
+}
+.myform{
+    border: 2px solid rebeccapurple;
+    width: 60%;
+    margin: 1px auto;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+}
+@media screen and (max-width:450px) {
+    .contact-main{
+        height: 27vh;
+    }
+    .contact{
+        padding: 20px 0px;
+    }
+    .con-icon{
+        width: 48%;
+    }
+    .con-icons{
+        width: 100%;
+    }
+    .myform{
+        width: 91%;
+        margin: 1px auto;
+        border-radius: 10px;
+        padding: 15px;
+        background-color: white;
+    }
+}
+/* contact.html Ends here.... */
+
+
+/* Yoga-Poses Page Section Starts from here... */
+.poses-box{
+    margin: 100px 150px;
+    font-size: 18px;
+}
+.line-space-1{
+    margin-bottom: 20px;
+}
+.list-span{
+    font-weight: bolder;
+}
+.one-category{
+    margin: 50px 0;
+}
+.one-category div video{
+    width: 80%;
+}
+.count-span{
+    display: inline-block;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+@media screen and (max-width:450px){
+    .poses-box{
+        margin: 0px;
+        font-size: 18px;
+    }
+    .one-category div video{
+        width: 100%;
+    }
+    
+}
+/* Yoga-Poses Section Ends here... */
+
+
+/* profile.html page starts from here... */
+.mytable tr td{
+    padding: 5px 10px;
+}
+.mytable{
+    width: 100%;
+}
+.recommend{
+    border-top: 2px solid #009688;
+    border-bottom: 2px solid #009688;
+    margin: 20px 0  50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.recommend img{
+    border-radius: 5px;
+}
+.sub-recommend{
+    width: 50%;
+    padding: 20px 0px;
+}
+.sub-recommend img{
+    width: 70%;
+}
+.query-status{
+    background-color: rgb(223, 198, 165);
+    font-weight: bold;
+    padding: 5px 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.queries{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+.modified{
+    display: inline-block;
+    padding: 0px 8px;
+    border-radius: 3px;
+    color: green;
+    font-weight:600;
+    font-style: italic;
+    background-color: rgb(229, 233, 236);
+}
+@media screen and (max-width:450px) {
+    .sub-recommend{
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .sub-recommend img{
+        width: 100%;
+    }
+}
+/* profile.html ends here... */
+
+
+/* About Us Page.... */
+.about-bg{
+    background-image: url('/static/img/about-bg.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.why-yoga{
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+}
+.sub-why-yoga{
+    border: 2px solid green;
+    width: 50%;
+    height: 50%;
+}
+.bg{
+    background-color: #f3edde;
+}
+.test{
+    /* border: 2px solid red; */
+    padding: 0px;
+    padding-top: 20px;
+    margin: 0px;
+}
+.test ul{
+    padding-left: 20px;
+}
+
+
+/* Styling for Update Page */
+
+#first{
+    background-image: url("/static/img/login-bg-img.jpg");
+    background-attachment: fixed;
+    width: 100%;
+    height:110vh;
+    background-size: cover;
+}
+#second{
+    padding-top: 30px;
+}
+#second form input, select{
+    margin: 8px 0px;
+}
+#second form{
+    width:60%;
+    border-radius :10px;
+    padding: 30px;
+    margin: 0px auto ;
+    background-color: #eed6c3;
+}
+.label{
+    width:60%;
+    border-radius :5px;
+    padding: 10px;
+    margin: 10px auto ;
+    background-color: #eed6c3;
+    color: darkred;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+@media screen and (max-width:450px) {
+    #second form{
+        width:100%;
+        border-radius :10px;
+        padding: 30px;
+        margin: 20px auto ;
+        background-color: #eed6c3;
+    }
+    #first{
+        margin-bottom: 160px;
+    }
+    .label{
+        width:100%;
+    }
+}
+/* update.html page ends here... */
+
+
+/* yoga-for-diseases.html page starts from here */
+.img-vid{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+.img-vid div img{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+.img-vid div iframe{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:450px) {
+    .img-vid div img{
+        width: 370px;
+        height: 230px;
+    }
+    .img-vid div iframe{
+        width: 370px;
+        height: 230px;
+    }
+}

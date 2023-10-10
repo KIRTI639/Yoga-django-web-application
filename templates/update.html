@@ -1,0 +1,48 @@
+{% include 'header.html' %}
+
+    <div id ="first">
+        <div class="container">
+            <div id="second" >
+                <a href="/home/profile" class="btn btn-outline-info">Back</a>
+                
+                <div class="label">Update Record</div>
+                
+                <form action="/update/{{data.id}}/" method="post">
+                    {% csrf_token %}
+                    
+                    {% for message in messages %}
+                    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                        {{message}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                    {% endfor %}
+
+                    <input type="text" readonly value="ID - {{data.id}}" class="form-control">
+                    <input type="text" required name="fullname" value="{{data.fullname}}" placeholder="Full Name" class="form-control">
+                    <input type="password" required name="pass1" placeholder="Password" class="form-control" value="{{data.pass1}}">
+                    <input type="password" required name="pass2" value="{{data.pass2}}" placeholder="Confirm Password" class="form-control">
+                    <input type="email" readonly name="email" placeholder="Email ID" class="form-control" value="{{data.email}}">
+                    <input type="tel" required name="mobile" placeholder="Mobile No." class="form-control" value="{{data.mobile}}">
+                    <input type="number" required name="age" placeholder="Enter Age" class="form-control" value="{{data.age}}">
+                    <select name="gender" required class="form-control">
+                        <option value="" selected>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <select name="disease" required class="form-control">
+                        <option value="" selected>Select Disease</option>
+                        {% for d in diseases %}
+                            <option value="{{d.d_code}} - {{d.d_name}}">{{d.d_code}} - {{d.d_name}}</option>
+                        {% endfor %}
+                        <option value="None">None</option>
+                    </select>
+                    <button type="submit" class="btn btn-outline-info">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+{% include 'footer.html' %}
