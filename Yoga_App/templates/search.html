@@ -1,14 +1,11 @@
 {% include 'header.html' %}
 
-
 <section class="container my-5">
     {% if query %}
       
     {% if diseases or yogas %}
     <p>Results for <b> "{{query}}" </b></p>
     <div class="diff-levels justify-content-between">
-
-        
         
         <!-- One Block -->
         {% for problem in diseases %}
@@ -27,16 +24,15 @@
                 
             {% for yoga in yogas %}
             
-                
-            <h3><span class="number">#{{forloop.counter}}</span>{{yoga.name}}</h3>
-            <div class="d-flex justify-content-between flex-wrap">
-                <div class="rounded">
-                    <img src="/{{yoga.image}}" alt="Image not found" width="500" height="300">
+                <h3><span class="number">#{{forloop.counter}}</span>{{yoga.name}}</h3>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <div class="rounded">
+                        <img src="/{{yoga.image}}" alt="Image not found" width="500" height="300">
+                    </div>
+                    <div class="rounded">
+                        <iframe width="500" height="300" src="{{yoga.video_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="rounded">
-                    <iframe width="500" height="300" src="{{yoga.video_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
                 
                 <h4>Steps to perform this -</h4>
                 <ul style="list-style-type: square; margin-left: 20px;">

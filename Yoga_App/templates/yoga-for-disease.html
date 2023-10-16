@@ -10,12 +10,12 @@
         {% for yoga in yogass %}
         
         <h3><span class="number">#{{forloop.counter}}</span>{{yoga.name}}</h3>
-        <div class="img-vid d-flex justify-content-between flex-wrap">
+        <div class="img-vid">
             <div class="mb-2">
-                <img src="/{{yoga.image}}" alt="Image not found" width="500" height="300">
+                <img src="/{{yoga.image}}" alt="Image not found">
             </div>
             <div>
-                <iframe src="{{yoga.video_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen width="500" height="300"></iframe>
+                <iframe src="{{yoga.video_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
         

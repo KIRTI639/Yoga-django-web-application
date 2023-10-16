@@ -19,8 +19,8 @@
 </head>
 <body>
   
-  <nav class="navbar navbar-expand-lg navbar-light p-4 sticky-top bg-light">
-    <a class="navbar-brand" href="/home">
+  <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-5 sticky-top">
+    <a class="navbar-brand" href="/">
       <span class="style">My Mat Space</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,9 +28,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-        </li>
         <li class="nav-item dropdown active">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Yoga
@@ -50,6 +47,10 @@
         <li class="nav-item active">
           <a class="nav-link" href="/home/help">Need Help</a>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/check-BMI">Check BMI</a>
+        </li>
+        {% if request.session.email %}  
         <li class="nav-item dropdown active">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa-solid fa-user"></i> Profile
@@ -59,10 +60,16 @@
             <a class="dropdown-item" href="/logout">Logout</a>
           </div>
         </li>
+        {% else %}
+        <li class="nav-item active">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        {% endif %}
       </ul>
       <form class="form-inline my-2 my-lg-0" action="/home/search/" method="get">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search Disease, Yoga" aria-label="Search" name="search" required>
+        <button class="btn my-2 my-sm-0 search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </form>
     </div>
   </nav>

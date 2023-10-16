@@ -1,7 +1,8 @@
 {% include 'header.html' %}
-
+    <div class="header-image">
+      <img src="/static/img/yoga2.1.jpg">
+    </div>
     <div class="image">
-
       <h1 class="text-white">Yoga has <br> <span class="head-span">Many Meanings...</span></h1>
       <p class="typing"><i class="fa-solid fa-circle-right"></i><span class="typing-text"></span></p>  
       
@@ -16,29 +17,6 @@
           on your schedule</p>
       </div>
 
-      <!-- Different levels -->
-      <!-- <div class="container diff-levels">
-        <div class="levels">
-          <img src="/static/img/Beginner.jpg" alt="Beginner Image" width="100%"> <br>
-          <p class="text-center p-2">These are the beginner level exercises. One, who has no exprience in Yoga, can
-            start exercising from this level.</p>
-          <a href="/home/yoga-poses" class="btn btn-outline-primary mb-5" style="margin-left:25%; width: 50%;">Basic Yoga Poses</a>
-        </div>
-
-        <div class="levels ms-5">
-          <img src="/static/img/Intermediate.jpg" alt="Intermediate Image" width="100%">
-          <p class="text-center p-2">These exercises are recommended to those peoples who have some experience in
-            Yoga/Exercise.</p>
-          <a href="/home/yoga-for-women" class="btn btn-outline-primary mb-5" style="margin-left:25%; width: 50%;">Yoga for Women</a>
-        </div>
-
-        <div class="levels ms-5">
-          <img src="/static/img/Advanced.jpg" alt="Advanced Image" width="100%">
-          <p class="text-center p-2">These are the advanced exercises. One, who has completed beginner and
-            intermediate expriences, can be recommended.</p>
-          <a href="/home/yoga-for-men" class="btn btn-outline-primary mb-5" style="margin-left:25%; width:50%">Yoga for Men</a>
-        </div>
-      </div> -->
       <div class="container diff-levels">
         
         <!-- One Block -->
@@ -47,7 +25,7 @@
           <img src="/{{problem.image}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Yoga for <span style="color: darkred; font-weight: bolder;">{{problem.d_name}}</span></h5>
-            <a href="/home/yoga-for-disease/{{problem.d_code}} - {{problem.d_name}}" class="btn btn-outline-primary">Go to Yogas</a>
+            <a href="/home/yoga-for-disease/{{problem.d_code}} - {{problem.d_name}}" class="btn go-to-btn">Start</a>
           </div>
         </div>
         {% endfor %}
@@ -69,18 +47,18 @@
             <i class="fa-sharp fa-solid fa-broom-ball"></i>
           </h1>
           <h4>WAKE UP ENERGIZED AND SLEEP SOUNDLY</h4>
-          <p class="pt-4">
+          <p class="pt-4 justify">
             Whether through movement or in stillness, we have a wide range of yoga classes and audio
             meditations designed to help you wake up rejuvenated, focused, quiet your mind, relax, and to fall into a deep sleep in little-to-no time at all.
           </p>
         </div>
 
-        <div class="text-white p-4 text-center ">
+        <div class="text-white p-4 text-center left-right-border">
           <h1 class="pb-4">
             <i class="fa-solid fa-person"></i>
           </h1>
           <h4>STRENGTHEN MIND AND BODY</h4>
-          <p class="pt-4">
+          <p class="pt-4 justify">
             Yoga is a powerful tool to hone the mind and body. Dive into classes to increase flexibility, release fascia, build overall strength, and sharpen your focus so you can live a balanced life.
           </p>
         </div>
@@ -90,7 +68,7 @@
             <i class="fa-solid fa-bed"></i>
           </h1>
           <h4>FEEL REJUVENATED AND YOUTHFUL</h4>
-          <p class="pt-4">
+          <p class="pt-4 justify">
             Whether through movement or in stillness, we have a wide range of yoga classes and audio
             meditations designed to help you wake up rejuvenated, focused, quiet your mind, relax, and to fall into a deep sleep in little-to-no time at all.
           </p>
@@ -138,7 +116,6 @@
               <li>Progressive relaxation</li>
               <li>Loving-kindness meditation</li>
               <li>Visualization meditation</li>
-              <!-- <li>Tension Headaches</li> -->
             </ul>
           </div>
         </div>
