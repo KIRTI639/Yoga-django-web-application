@@ -11,9 +11,9 @@ from django.conf import settings
 #     import smtplib
 #     import ssl
 #     from email.message import EmailMessage
-#     sender = 'saraju.work@gmail.com'
-#     receiver = ['kirtirajput63969@gmail.com', 'saraju8604@gmail.com', 'jayadmalik525@gmail.com', 'vanshikavce19@gmail.com']
-#     password = 'tqvcfwnvjkmheytz'
+#     sender = ''
+#     receiver = ['kirtirajput63969@gmail.com']
+#     password = ''
 
 #     obj = EmailMessage()
 #     obj['From'] = sender
@@ -228,7 +228,7 @@ def contact(request):
                 # Send email to Admins
                 subject = 'Attention Please! Query is Sent at <My-Mat-Space>'
                 email_message = f"{user[0]['fullname']} has a query regarding \"{sub}\". Please check your admin panel, if needed, and provide the solution to the user.\nHave a good day! 😊😍"
-                recipient_list = ["saraju.work@gmail.com", "kirtirajput63969@gmail.com", 'jayadmalik525@gmail.com', 'vanshikavce19@gmail.com']
+                recipient_list = ["kirtirajput63969@gmail.com"']
                 email_from = settings.EMAIL_HOST_USER
                 send_mail( subject, email_message, email_from, recipient_list )
 
